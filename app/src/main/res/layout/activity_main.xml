@@ -14,7 +14,16 @@
         android:text="메시지 띄우기"
         app:iconTint="#CCBEBE"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="524dp" />
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="237dp"
+        android:layout_height="126dp"
+        android:text="네이버 접속하기"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="346dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
