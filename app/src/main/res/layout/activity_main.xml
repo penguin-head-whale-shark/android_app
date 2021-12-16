@@ -20,7 +20,8 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="237dp"
-        android:layout_height="126dp"
+        android:layout_height=""
+        android:onClick="onButton2Clicked"
         android:text="네이버 접속하기"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="346dp"
