@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,23 +9,19 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="201dp"
-        android:layout_height="165dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="onButton1Clicked"
         android:text="메시지 띄우기"
         app:iconTint="#CCBEBE"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="94dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="237dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height=""
-        android:onClick="onButton2Clicked"
-        android:text="네이버 접속하기"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="346dp"
-        tools:ignore="MissingConstraints" />
+        android:text="안녕하세요 이건 글자에요"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
