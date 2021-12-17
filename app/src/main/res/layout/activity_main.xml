@@ -12,17 +12,27 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
         android:onClick="onButton1Clicked"
         android:text="메시지 띄우기"
-        app:iconTint="#CCBEBE"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="94dp" />
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
         android:text="안녕하세요 이건 글자에요"
+        android:textColor="@color/black"
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

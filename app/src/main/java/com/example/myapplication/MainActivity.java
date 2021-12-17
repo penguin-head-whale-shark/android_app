@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         System.out.println("실행 성공");
     }
-    public void onButton1Clicked(View v){
+    public void onButton1Clicked(View v){//context 는 환경정보를 담음
         Toast.makeText(this,"버튼이 눌렸어요",Toast.LENGTH_LONG).show();
+        System.out.println("실행 완료");
     }
 }
