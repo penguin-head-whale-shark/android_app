@@ -19,4 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"버튼이 눌렸어요",Toast.LENGTH_LONG).show();
         System.out.println("실행 완료");
     }
+    public void onButton3Clicked(View v){
+        Toast.makeText(this,"검색이 눌렸어요",Toast.LENGTH_LONG).show();
+    }
 }
