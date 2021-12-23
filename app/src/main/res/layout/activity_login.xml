@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login Page"
+        android:textSize="50dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        ></TextView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        ></ImageView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ></EditText>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:text="Login"
+    android:background="@color/black"
+    ></Button>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="password"
+            android:layout_weight="1"
+            android:gravity="center"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </TextView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="회원가입"
+        ></Button>
+</LinearLayout>
