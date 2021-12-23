@@ -51,13 +51,31 @@
         android:hint="Password"
         ></EditText>-->
 
-    <Button
+    <LinearLayout
         android:id="@+id/Login_Button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/btn_mint"
-        android:text="로그인">
-    </Button>
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingLeft="12dp"
+        android:gravity="center"
+        android:paddingRight="12dp">
+
+        <!-- Linear Layout을 통한 버튼 만들기 (이미지 삽입한 버튼)-->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/login_icon"></ImageView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="로그인"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,12 +83,32 @@
         android:gravity="center"
 
         ></TextView>
-    <Button
+    <LinearLayout
         android:id="@+id/anLogin_Button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/btn_blue"
-        android:text="Google로 로그인"></Button>
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingLeft="12dp"
+        android:gravity="center"
+        android:paddingRight="12dp">
+
+        <!-- Linear Layout을 통한 버튼 만들기 (이미지 삽입한 버튼)-->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/google_icon"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Google을 통해 로그인"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
