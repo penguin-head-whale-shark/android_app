@@ -4,7 +4,7 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/white"
-    >
+    android:padding="20dp" ><!-- padding으로 자식 레이아웃들을 부모에게서 떨어지게 할 수 있음 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,8 +55,9 @@
         android:id="@+id/Login_Button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/btn_blue"
-        android:text="로그인"></Button>
+        android:background="@drawable/btn_mint"
+        android:text="로그인">
+    </Button>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +69,7 @@
         android:id="@+id/anLogin_Button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/btn_mint"
+        android:background="@drawable/btn_blue"
         android:text="Google로 로그인"></Button>
     <LinearLayout
         android:layout_width="match_parent"
