@@ -12,52 +12,88 @@
         android:textSize="50dp"
         android:textColor="@color/black"
         android:gravity="center"
+        android:textStyle="bold"
         ></TextView>
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
+        android:layout_height="80dp"
+        android:src="@drawable/box_icon"
         android:layout_gravity="center"
         ></ImageView>
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--<EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        ></EditText>
-    <EditText
+        android:hint="Email"
+        ></EditText>-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password">
+            <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--<EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        ></EditText>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:text="Login"
-    android:background="@color/black"
-    ></Button>
-    <androidx.appcompat.widget.LinearLayoutCompat
+        android:hint="Password"
+        ></EditText>-->
+
+    <Button
+        android:id="@+id/Login_Button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="로그인"></Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:gravity="center"
+
+        ></TextView>
+    <Button
+        android:id="@+id/anLogin_Button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_mint"
+        android:text="Google로 로그인"></Button>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
+        android:layout_marginTop="20dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="password"
+            android:text="비밀번호 찾기"
             android:layout_weight="1"
             android:gravity="center"
+            android:textSize="14dp"
             ></TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ID"
+            android:text="회원가입"
             android:layout_weight="1"
-            android:gravity="center">
-
-        </TextView>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="회원가입"
-        ></Button>
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            ></TextView>
+    </LinearLayout>
 </LinearLayout>
