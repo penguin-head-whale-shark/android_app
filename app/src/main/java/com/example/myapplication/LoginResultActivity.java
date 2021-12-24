@@ -23,7 +23,7 @@ public class LoginResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         Bundle bundle = intent.getExtras();
-        String email = bundle.getString("email");
+        String email = bundle.getString("id");
         String password = bundle.getString("password");
 
         TextView_get.setText(email + " + "+password);

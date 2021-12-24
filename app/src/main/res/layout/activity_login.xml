@@ -13,12 +13,6 @@
         android:orientation="horizontal"
         android:gravity="center"
         >
-        <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/wing_icon"
-
-            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +23,7 @@
             />
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/TextInputEditText_email"
+        android:id="@+id/TextInputEditText_id"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
@@ -38,7 +32,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="이메일">
+            android:hint="id">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,7 +51,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="비밀번호">
+            android:hint="password">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -71,7 +65,7 @@
         android:id="@+id/Login_Button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/btn_mint"
+        android:background="@drawable/btn_purple"
         android:orientation="horizontal"
         android:weightSum="2"
         android:paddingLeft="12dp"

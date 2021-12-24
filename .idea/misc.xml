@@ -7,11 +7,14 @@
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/basic_stroke.xml" value="0.35625" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_background.xml" value="0.3390625" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_blue.xml" value="0.3390625" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_lightpurple.xml" value="0.34933605720122574" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_mint.xml" value="0.35625" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_purple.xml" value="0.34933605720122574" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/edittext_login_stroke.xml" value="0.34933605720122574" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.35625" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/main_scrollview_stroke.xml" value="0.178125" />
-        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>

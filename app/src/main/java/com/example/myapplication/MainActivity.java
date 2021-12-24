@@ -12,13 +12,13 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
-    TextInputEditText TextInputEditText_email, TextInputEditText_password;
+    TextInputEditText TextInputEditText_id, TextInputEditText_password;
     LinearLayout Login_Button;//변수로 만듬
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        TextInputEditText_email = findViewById(R.id.TextInputEditText_email);
+        TextInputEditText_id = findViewById(R.id.TextInputEditText_id);
         TextInputEditText_password = findViewById(R.id.TextInputEditText_password);
         Login_Button = findViewById(R.id.Login_Button);//변수에 뷰에서 찾아온 컴포넌트와 연결
 
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Login_Button.setOnClickListener(new View.OnClickListener() { //새로운 리스너 달아줌
             @Override
             public void onClick(View v){
-                String email = TextInputEditText_email.getText().toString();//입력한 값을 문자열로 반환
+                String id = TextInputEditText_id.getText().toString();//입력한 값을 문자열로 반환
                 String password = TextInputEditText_password.getText().toString();//입력한 값을 문자열로 반환
                 Intent intent = new Intent(MainActivity.this, LoginResultActivity.class);
-                intent.putExtra("email",email);
+                intent.putExtra("id",id);
                 intent.putExtra("password",password);
                 startActivity(intent);
             }
