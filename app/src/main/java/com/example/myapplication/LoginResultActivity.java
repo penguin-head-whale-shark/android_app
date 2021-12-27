@@ -18,8 +18,6 @@ public class LoginResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TextView_get= findViewById(R.id.TextView_get);
-
         Intent intent = getIntent();
 
         Bundle bundle = intent.getExtras();

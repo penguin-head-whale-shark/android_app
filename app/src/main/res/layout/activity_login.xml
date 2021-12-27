@@ -13,10 +13,10 @@
         android:orientation="horizontal"
         android:gravity="center"
         >
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MyPeng"
+            android:src="@drawable/mypeng"
             android:textSize="80dp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -25,10 +25,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputEditText_id"
         android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_height="65dp"
         android:layout_marginTop="100dp"
         android:background="@drawable/edittext_login_stroke"
-        android:padding="5dp"
+        android:padding="10dp"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -46,10 +46,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputEditText_password"
         android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_height="65dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_login_stroke"
-        android:padding="5dp">>
+        android:padding="10dp">>
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -66,13 +66,13 @@
 
     <LinearLayout
         android:id="@+id/Login_Button"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@drawable/btn_purple"
         android:orientation="horizontal"
         android:weightSum="2"
         android:paddingLeft="12dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:paddingRight="12dp">
 
@@ -87,9 +87,10 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="로그인"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:text="login"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="300dp"
