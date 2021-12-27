@@ -25,6 +25,9 @@
             android:hint=" 검색..."
             android:textColorHint="@color/black"
             android:background="@drawable/basic_stroke"/>
+
+
+
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -55,12 +58,6 @@
                 />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/wing_icon"
-
-            />
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
