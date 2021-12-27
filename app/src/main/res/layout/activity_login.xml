@@ -5,11 +5,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/white"
     android:padding="20dp"
-    android:gravity="center"><!-- padding으로 자식 레이아웃들을 부모에게서 떨어지게 할 수 있음 -->
+    android:gravity="center_horizontal"><!-- padding으로 자식 레이아웃들을 부모에게서 떨어지게 할 수 있음 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="100dp"
         android:orientation="horizontal"
         android:gravity="center"
         >
@@ -17,23 +17,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MyPeng"
-            android:textSize="70dp"
-            android:textColor="@color/blue"
+            android:textSize="80dp"
+            android:textColor="@color/black"
             android:textStyle="bold"
             />
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputEditText_id"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/basic_stroke"
-        android:padding="5dp"> <!-- Email-->
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edittext_login_stroke"
+        android:padding="5dp"
+        >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="id">
-
+            android:layout_height="match_parent"
+            android:hint="id"
+            android:background="@null">
+            <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
     <!--<EditText
@@ -43,15 +45,16 @@
         ></EditText>-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputEditText_password"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/basic_stroke"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_login_stroke"
         android:padding="5dp">>
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="password">
+            android:layout_height="match_parent"
+            android:hint="password"
+            android:background="@null">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,13 +66,13 @@
 
     <LinearLayout
         android:id="@+id/Login_Button"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@drawable/btn_purple"
         android:orientation="horizontal"
         android:weightSum="2"
         android:paddingLeft="12dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:paddingRight="12dp">
 
@@ -78,17 +81,18 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/login_icon"></ImageView>
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
-            android:text="로그인"
-            android:textStyle="bold"
+            android:layout_weight="1"
             android:gravity="center"
-            android:textColor="@color/white"/>
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
@@ -116,4 +120,5 @@
             android:textColor="@color/purple_700"
             ></TextView>
     </LinearLayout>
+
 </LinearLayout>
