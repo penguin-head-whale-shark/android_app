@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -17,14 +18,19 @@
             android:background="#9999FF"
             android:elevation="1dp"
             android:theme="@style/CardView.Dark">
-
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/edit"/>
             <TextView
+                android:layout_marginLeft="30dp"
                 android:id="@+id/title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="글쓰기"
                 android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
         </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
@@ -50,7 +56,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:padding="4dp">
 
         <EditText
             android:id="@+id/write_title"
@@ -65,18 +72,14 @@
             android:background="@drawable/ic_stat_name"
             android:backgroundTint="@color/black" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="내용"
-        android:textSize="20dp" />
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/write_main"
         android:shadowColor="@color/black"
+        android:padding="10dp"
+        android:hint="내용..."
+        android:gravity="top"
         />
 
 </LinearLayout>
