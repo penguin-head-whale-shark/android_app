@@ -158,13 +158,19 @@
 
       </ScrollView>
    </FrameLayout>
+   <TextView
+       android:id="@+id/cnt_index"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:text=""
+       android:gravity="center"/>
    <LinearLayout
        android:layout_width="match_parent"
-       android:layout_marginTop="40dp"
        android:layout_height="90dp"
        android:gravity="center"
        android:elevation="10dp">
          <ImageView
+             android:id="@+id/back_button"
              android:layout_width="40dp"
              android:layout_height="40dp"
              android:src="@drawable/left"
@@ -198,6 +204,7 @@
              android:fontFamily="@font/jua"/>
       </LinearLayout>
       <ImageView
+          android:id="@+id/next_button"
           android:layout_width="40dp"
           android:layout_height="40dp"
           android:src="@drawable/right"
