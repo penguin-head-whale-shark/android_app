@@ -8,10 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="실시간 펭붕이 ㅈ댔다"
-        android:textSize="25sp"
-        android:layout_margin="10dp"/>
+        android:text="시발 ㅈ같네 걍 만들어야지"
+        android:textSize="35sp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/jua"
+        android:gravity="center"
+        android:textColor="@color/black"/>
     <TextView
+        android:id="@+id/name_write"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
@@ -25,8 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:background="@android:color/holo_orange_light"
+        android:background="@color/mypeng_purple1"
         android:gravity="bottom|right"
+        android:padding="5dp"
         >
         <TextView
             android:layout_width="wrap_content"
