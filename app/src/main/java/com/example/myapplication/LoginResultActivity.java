@@ -4,62 +4,45 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toolbar;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.textfield.TextInputEditText;
-
-
-public class LoginResultActivity extends AppCompatActivity {
-    Fragment fragment1;
-    Fragment fragment2;
-   package com.example.myapplication;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import androidx.appcompat.app.ActionBar;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.internal.NavigationMenuView;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.textfield.TextInputEditText;
-
 
 
 public class LoginResultActivity extends AppCompatActivity {
     Fragment fragment1;
     Fragment fragment2;
-
+    DrawerLayout menu;
+    NavigationView nav;
     TextView TextView_get;
     int index =0,count=7;
     Toast sToast = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_student);
+        setContentView(R.layout.activity_main);
 
         fragment1 = new Fragment();
         fragment2 = new Fragment();
+        menu = findViewById(R.id.menu);
+        nav = findViewById(R.id.navigation);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
 
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("건의 사항"));
@@ -70,15 +53,21 @@ public class LoginResultActivity extends AppCompatActivity {
         TextView cnt = findViewById(R.id.cnt_index);
         ImageView left = findViewById(R.id.back_button);
         ImageView right = findViewById(R.id.next_button);
-        cnt.setText((index +1) + " / " +(count));
+        cnt.setText((index + 1) + " / " + (count));
+
+        burger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                menu.openDrawer(nav,true);
+            }
+        });
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(index > 0){
-                    index = index -1;
-                    cnt.setText((index +1) + " / " +(count));
-                }
-                else {
+                if (index > 0) {
+                    index = index - 1;
+                    cnt.setText((index + 1) + " / " + (count));
+                } else {
                     if (sToast == null) {
                         sToast = Toast.makeText(getApplicationContext(), "첫 번째 인덱스입니다.", Toast.LENGTH_SHORT);
                     } else {
@@ -92,11 +81,10 @@ public class LoginResultActivity extends AppCompatActivity {
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(index + 1 < count ){
+                if (index + 1 < count) {
                     index += 1;
                     cnt.setText((index + 1) + " / " + (count));
-                }
-                else {
+                } else {
                     if (sToast == null) {
                         sToast = Toast.makeText(getApplicationContext(), "마지막 인덱스입니다.", Toast.LENGTH_SHORT);//토스트 메시지 중복 제거
                     } else {
@@ -106,31 +94,24 @@ public class LoginResultActivity extends AppCompatActivity {
                 }
             }
         });
-
-        burger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 int position = tab.getPosition();
-                Log.d("LoginResultActivity","선택 : " + position);
+                Log.d("LoginResultActivity", "선택 : " + position);
 
                 Fragment selected = null;
-                if(position == 0){
+                if (position == 0) {
                     selected = fragment1;
                     scroll1.setVisibility(View.VISIBLE);
                     scroll2.setVisibility(View.INVISIBLE);
-                }else if(position == 1){
+                } else if (position == 1) {
                     selected = fragment2;
                     scroll1.setVisibility(View.INVISIBLE);
                     scroll2.setVisibility(View.VISIBLE);
                 }
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,selected).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, selected).commit();
             }
 
             @Override
@@ -147,8 +128,8 @@ public class LoginResultActivity extends AppCompatActivity {
         wrt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 Intent intent = new Intent(getApplicationContext(),WriteActivity.class);
-                 startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), WriteActivity.class);
+                startActivity(intent);
             }
         });
     }
