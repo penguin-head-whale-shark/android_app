@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.example.myapplication;
 
 import android.content.Intent;
@@ -22,7 +22,6 @@ import com.google.android.material.textfield.TextInputEditText;
 public class LoginResultActivity extends AppCompatActivity {
     Fragment fragment1;
     Fragment fragment2;
-=======
    package com.example.myapplication;
 
 import android.content.Intent;
@@ -37,12 +36,12 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginResultActivity extends AppCompatActivity {
 
->>>>>>> 5596b7ebe1a168c826822c6e0d6dadd620b3ff36
+
     TextView TextView_get;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
+
         setContentView(R.layout.activity_main_student);
 
         fragment1 = new Fragment();
@@ -102,7 +101,6 @@ public class LoginResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-=======
         setContentView(R.layout.activity_login);
 
         Intent intent = getIntent();
@@ -112,6 +110,5 @@ public class LoginResultActivity extends AppCompatActivity {
         String password = bundle.getString("password");
 
         TextView_get.setText(email + " + "+password);
->>>>>>> 5596b7ebe1a168c826822c6e0d6dadd620b3ff36
     }
 }

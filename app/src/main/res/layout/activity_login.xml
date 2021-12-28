@@ -14,19 +14,9 @@
         android:gravity="center"
         >
         <ImageView
-<<<<<<< HEAD
             android:layout_width="370dp"
             android:layout_height="100dp"
             android:src="@drawable/logo"
-
-=======
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/mypeng"
-            android:textSize="80dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
->>>>>>> 5596b7ebe1a168c826822c6e0d6dadd620b3ff36
             />
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -90,7 +80,6 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-<<<<<<< HEAD
             android:src="@drawable/login_icon"
             ></ImageView>
         <TextView
@@ -114,9 +103,9 @@
         android:gravity="center"
         android:paddingRight="12dp"
         android:clickable="true">
-=======
-            android:src="@drawable/login_icon"></ImageView>
->>>>>>> 5596b7ebe1a168c826822c6e0d6dadd620b3ff36
+</ImageView>
+</ImageView>
+
 
         <TextView
             android:layout_width="0dp"
