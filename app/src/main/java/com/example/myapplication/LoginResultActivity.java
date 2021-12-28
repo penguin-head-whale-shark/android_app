@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -36,6 +37,15 @@ public class LoginResultActivity extends AppCompatActivity {
         tabs.addTab(tabs.newTab().setText("공지 사항"));
         ScrollView scroll1 = findViewById(R.id.scrollView1);
         ScrollView scroll2 = findViewById(R.id.scrollView2);
+        ImageView burger = findViewById(R.id.burger_button);
+
+
+        burger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
