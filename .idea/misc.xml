@@ -11,10 +11,18 @@
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_mint.xml" value="0.35625" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/btn_purple.xml" value="0.34933605720122574" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/edittext_login_stroke.xml" value="0.34933605720122574" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/edittext_stroke.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.35625" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/main_scrollview_stroke.xml" value="0.178125" />
-        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/font/font.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main_student.xml" value="0.22" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main_teacher.xml" value="0.3359375" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_resister.xml" value="0.25" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_write.xml" value="0.3359375" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/resister.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/layout/test.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/DGSW/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19895833333333332" />
       </map>

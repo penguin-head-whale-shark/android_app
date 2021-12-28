@@ -25,6 +25,9 @@
             android:name=".LoginResultActivity">
 
         </activity>
+        <activity android:name=".ResisterActivity">
+
+        </activity>
     </application>
 
 </manifest>
