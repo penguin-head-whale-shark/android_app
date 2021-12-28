@@ -35,8 +35,8 @@
             android:elevation="1dp"
             app:tabGravity="fill"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/blue"
-            app:tabTextColor="@color/red"
+            app:tabSelectedTextColor="@color/purple_500"
+            app:tabTextColor="@color/black"
 
             />
 
