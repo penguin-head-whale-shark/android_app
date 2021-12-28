@@ -1,4 +1,5 @@
-   package com.example.myapplication;
+
+package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,31 @@ import com.google.android.material.textfield.TextInputEditText;
 public class LoginResultActivity extends AppCompatActivity {
     Fragment fragment1;
     Fragment fragment2;
+   package com.example.myapplication;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toolbar;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputEditText;
+
+
+
+public class LoginResultActivity extends AppCompatActivity {
+    Fragment fragment1;
+    Fragment fragment2;
+
     TextView TextView_get;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
