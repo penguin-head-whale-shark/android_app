@@ -5,36 +5,41 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/white"
     android:padding="20dp"
-    android:gravity="center_horizontal"><!-- padding으로 자식 레이아웃들을 부모에게서 떨어지게 할 수 있음 -->
+    android:gravity="center_horizontal"
+    android:weightSum="10"><!-- padding으로 자식 레이아웃들을 부모에게서 떨어지게 할 수 있음 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_weight="2"
         >
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/mypeng"
             android:textSize="80dp"
             android:textColor="@color/black"
-            android:textStyle="bold"
+            android:text="MyPeng"
+            android:fontFamily="@font/pushster"
             />
     </LinearLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="250dp"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:background="@drawable/edittext_login_stroke"
         android:padding="10dp"
+        android:layout_weight="0.8"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextInputEditText_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="id"
-            android:background="@null">
+            android:background="@null"
+            android:fontFamily="@font/jua">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -45,16 +50,18 @@
         ></EditText>-->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="250dp"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/edittext_login_stroke"
-        android:padding="10dp">>
+        android:padding="10dp"
+        android:layout_weight="0.8">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextInputEditText_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="password"
-            android:background="@null">
+            android:background="@null"
+            android:fontFamily="@font/jua">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -72,7 +79,7 @@
         android:orientation="horizontal"
         android:weightSum="2"
         android:paddingLeft="12dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:paddingRight="12dp"
         android:clickable="true"
@@ -92,14 +99,15 @@
             android:text="login"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:fontFamily="@font/jua"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:clickable="true"
         >
         <TextView
@@ -111,6 +119,7 @@
             android:textSize="14dp"
             android:textColor="@color/black"
             android:textStyle="bold"
+            android:fontFamily="@font/jua"
             ></TextView>
         <TextView
             android:layout_width="wrap_content"
@@ -121,6 +130,9 @@
             android:textSize="14dp"
             android:textStyle="bold"
             android:textColor="@color/purple_700"
+            android:clickable="true"
+            android:id="@+id/resister"
+            android:fontFamily="@font/jua"
             ></TextView>
     </LinearLayout>
 
