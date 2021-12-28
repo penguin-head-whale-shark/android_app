@@ -24,32 +24,102 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-        <EditText
-            android:id="@+id/ID"
-            android:layout_width="200dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="10">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="270dp"
-            android:hint="아이디" />
-
-        <EditText
-            android:id="@+id/PW"
-            android:layout_width="200dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/edittext_login_stroke"
+            android:padding="10dp"
+            android:layout_weight="0.5"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="이름"
+                android:background="@null"
+                android:fontFamily="@font/jua">
+                <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:hint="비밀번호" />
-
-        <EditText
-            android:id="@+id/REPW"
-            android:layout_width="200dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_login_stroke"
+            android:padding="10dp"
+            android:layout_weight="0.5"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/school"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="학교"
+                android:background="@null"
+                android:fontFamily="@font/jua">
+                <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:hint="비밀번호 확인" />
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_login_stroke"
+            android:padding="10dp"
+            android:layout_weight="0.5"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="아이디"
+                android:background="@null"
+                android:fontFamily="@font/jua">
+                <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--<EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            ></EditText>-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_login_stroke"
+            android:padding="10dp"
+            android:layout_weight="0.5">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="비밀번호"
+                android:background="@null"
+                android:fontFamily="@font/jua">
+                <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_login_stroke"
+            android:padding="10dp"
+            android:layout_weight="0.5">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/REPW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="비밀번호 다시 입력"
+                android:background="@null"
+                android:fontFamily="@font/jua">
+                <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/Resisterbtn"
@@ -58,10 +128,11 @@
             android:layout_gravity="center
 "
             android:layout_marginTop="46dp"
-            android:backgroundTint="@color/purple_200"
-            android:hint="가입하기"
+            android:background="@drawable/btn_purple"
+            android:text="가입하기"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/jua"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

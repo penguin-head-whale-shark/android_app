@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.appcompat.app.ActionBar;
@@ -22,6 +23,8 @@ public class LoginResultActivity extends AppCompatActivity {
     Fragment fragment1;
     Fragment fragment2;
     TextView TextView_get;
+    int index =0,count=7;
+    Toast sToast = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +41,45 @@ public class LoginResultActivity extends AppCompatActivity {
         ScrollView scroll1 = findViewById(R.id.scrollView1);
         ScrollView scroll2 = findViewById(R.id.scrollView2);
         ImageView burger = findViewById(R.id.burger_button);
+        TextView cnt = findViewById(R.id.cnt_index);
+        ImageView left = findViewById(R.id.back_button);
+        ImageView right = findViewById(R.id.next_button);
+        cnt.setText((index +1) + " / " +(count));
+        left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(index > 0){
+                    index = index -1;
+                    cnt.setText((index +1) + " / " +(count));
+                }
+                else {
+                    if (sToast == null) {
+                        sToast = Toast.makeText(getApplicationContext(), "첫 번째 인덱스입니다.", Toast.LENGTH_SHORT);
+                    } else {
+                        sToast.setText("첫 번째 인덱스입니다.");
+                    }
+                    sToast.show();
+                }
+            }
+        });
 
+        right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(index + 1 < count ){
+                    index += 1;
+                    cnt.setText((index + 1) + " / " + (count));
+                }
+                else {
+                    if (sToast == null) {
+                        sToast = Toast.makeText(getApplicationContext(), "마지막 인덱스입니다.", Toast.LENGTH_SHORT);//토스트 메시지 중복 제거
+                    } else {
+                        sToast.setText("마지막 인덱스입니다.");
+                    }
+                    sToast.show();
+                }
+            }
+        });
 
         burger.setOnClickListener(new View.OnClickListener() {
             @Override
