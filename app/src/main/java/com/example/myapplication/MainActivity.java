@@ -1,14 +1,17 @@
 package com.example.myapplication;
 
+import androidx.annotation.RequiresPermission;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.LinearLayout;
 
 import android.widget.TextView;
@@ -48,4 +51,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }
