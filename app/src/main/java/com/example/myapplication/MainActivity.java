@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -24,7 +25,15 @@ public class MainActivity extends AppCompatActivity {
         TextInputEditText TextInputEditText_password = findViewById(R.id.TextInputEditText_password);
         TextInputEditText TextInputEditText_id = findViewById(R.id.TextInputEditText_id);
         LinearLayout t = findViewById(R.id.Login_Button);
+        TextView res = findViewById(R.id.resister);
 
+        res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(getApplicationContext(), ResisterActivity.class);
+                startActivity(i);
+            }
+        });
 
 
         t.setOnClickListener(new View.OnClickListener() {
