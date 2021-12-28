@@ -27,7 +27,8 @@
             android:gravity="left"
             android:textColor="@color/black"
             android:layout_marginTop="100dp"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:background=" ?attr/selectableItemBackground"/>
         <TextView
             android:id="@+id/logout_button"
             android:layout_width="match_parent"
@@ -38,6 +39,7 @@
             android:gravity="left"
             android:textColor="@color/black"
             android:layout_marginTop="30dp"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:background=" ?attr/selectableItemBackground"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
