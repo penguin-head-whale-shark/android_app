@@ -16,6 +16,8 @@ public class Changectivity extends AppCompatActivity {
 
     TextView title;
     TextView main;
+
+    public static String Title,Content;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,19 +26,26 @@ public class Changectivity extends AppCompatActivity {
         title = findViewById(R.id.write_title);
         main = findViewById(R.id.write_main);
 
-        Intent b = getIntent();
-        title.setText(b.getStringExtra("제목"));
-        main.setText(b.getStringExtra("내용"));
+
+        title.setText(WriteActivity.Title);
+        main.setText(WriteActivity.Content);
+
+        if(LoginResultActivity.ga == 1){
+            title.setText(Changectivity.Title);
+            main.setText(Changectivity.Content);
+            LoginResultActivity.ga = 0;
+        }
 
         Button w = findViewById(R.id.write);
+
 
         w.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LoginResultActivity.class);
-                i.putExtra("제목",title.getText().toString());
-                i.putExtra("내용",main.getText().toString());
-
+            LoginResultActivity.ischange = true;
+                Title = title.getText().toString();
+                Content = main.getText().toString();
                 startActivity(i);
                 finish();
             }

@@ -25,6 +25,8 @@ import retrofit2.http.Path;
 
 public class ResisterActivity extends Activity {
 
+    public static String Name;
+
     public interface RetrofitService{
         @FormUrlEncoded
         @POST("/api/v1/user/sign-up")
@@ -53,7 +55,7 @@ public class ResisterActivity extends Activity {
 
                 String Id = id.getText().toString();
                 String Pw = pw.getText().toString();
-                String Name = name.getText().toString();
+                Name = name.getText().toString();
                 String School = school.getText().toString();
 
                 Call<PostResult> p = ResisterActivity.RetrofitServiceImplFactory.Post().setPosts(Id,Pw,Name,false,School);

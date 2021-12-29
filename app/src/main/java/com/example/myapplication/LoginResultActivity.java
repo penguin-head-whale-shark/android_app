@@ -27,6 +27,13 @@ import com.google.android.material.tabs.TabLayout;
 
 import org.w3c.dom.Text;
 
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Field;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
+
 
 public class LoginResultActivity extends AppCompatActivity {
     Fragment fragment1;
@@ -37,12 +44,21 @@ public class LoginResultActivity extends AppCompatActivity {
     int index =0,count=7;
     Toast sToast = null;
 
+    public static boolean iscreated = false;
+    public static boolean ischange = false;
+
+    public static int ga = 0;
     LinearLayout sc;
     LinearLayout linearLayout;
+    Button add;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String Title = WriteActivity.Title;
+        String Content = WriteActivity.Content;
+        add = new Button(this);
 
         fragment1 = new Fragment();
         fragment2 = new Fragment();
@@ -51,28 +67,34 @@ public class LoginResultActivity extends AppCompatActivity {
         sc = findViewById(R.id.linearLayout2);
         linearLayout = findViewById(R.id.linearLayout);
 
-        Intent b = getIntent();
-        Button add = new Button(this);
-        String text = b.getStringExtra("제목");
-        add.setHint(text);
-        add.setWidth(sc.getWidth());
-        add.setHeight(48);
-        add.setId('1');
-        if(b.getExtras()!=null) {
-            Log.d("로그","서주영");
-
+        if(iscreated) {
+            add.setText(WriteActivity.Title);
+            add.setWidth(sc.getWidth());
+            add.setHeight(48);
             sc.addView(add);
+            iscreated = false;
         }
+
+        if(ischange){
+            add.setText(Changectivity.Title);
+            Log.d("ischange","야 바꼇다" + Changectivity.Title);
+            add.setWidth(sc.getWidth());
+            add.setHeight(48);
+            sc.addView(add);
+            ga = 1;
+        }
+        Intent b = getIntent();
+
         int check = b.getIntExtra("삭제",0);
+
         if(check == 1){
             linearLayout.removeViewAt(0);
         }
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ShowActivity.class);
-                i.putExtras(b.getExtras());
-
                 startActivity(i);
             }
         });
@@ -166,7 +188,6 @@ public class LoginResultActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), WriteActivity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -189,5 +210,22 @@ public class LoginResultActivity extends AppCompatActivity {
                 finish();
             }
         }));
+    }
+
+    public interface Service{
+        @GET("/api/v1/suggestion/get/{suggestionId}")
+        Call<WriteResult> get(@Field("Token") String token);
+    }
+
+    static class RetrofitServiceImplFactory{
+        private static Retrofit getretrofit(){
+            return new Retrofit.Builder()
+                    .baseUrl("https://f93e-58-238-74-139.ngrok.io/")
+                    .addConverterFactory(GsonConverterFactory.create()).build();
+        }
+
+        public static LoginResultActivity.Service Post(){
+            return getretrofit().create(Service.class);
+        }
     }
 }
