@@ -1,6 +1,7 @@
 
 package com.example.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,9 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.internal.NavigationMenuView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputEditText;
+
+import org.w3c.dom.Text;
 
 
 public class LoginResultActivity extends AppCompatActivity {
@@ -54,6 +58,24 @@ public class LoginResultActivity extends AppCompatActivity {
         ImageView left = findViewById(R.id.back_button);
         ImageView right = findViewById(R.id.next_button);
         cnt.setText((index + 1) + " / " + (count));
+        TextView ps_wrt = findViewById(R.id.show_pass_write);
+        TextView logout = findViewById(R.id.logout_button);
+
+        ps_wrt.setOnClickListener(new View.OnClickListener() {//채택된 건의사항
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ShowWriteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener((new View.OnClickListener() {//로그아웃
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        }));
 
         burger.setOnClickListener(new View.OnClickListener() {
             @Override
