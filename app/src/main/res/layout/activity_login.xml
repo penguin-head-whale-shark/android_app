@@ -37,7 +37,7 @@
             android:id="@+id/TextInputEditText_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="id"
+            android:hint="아이디"
             android:background="@null"
             android:fontFamily="@font/jua">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
@@ -59,7 +59,7 @@
             android:id="@+id/TextInputEditText_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="password"
+            android:hint="비밀번호"
             android:background="@null"
             android:fontFamily="@font/jua">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
@@ -93,31 +93,6 @@
             ></ImageView>
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:text="로그인"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="@color/white"/>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/anLogin_Button"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/btn_blue"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:paddingLeft="12dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:paddingRight="12dp"
-        android:clickable="true">
-</ImageView>
-</ImageView>
-
-
-        <TextView
-            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -126,6 +101,7 @@
             android:textStyle="bold"
             android:textSize="20dp"
             android:fontFamily="@font/jua"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="300dp"
