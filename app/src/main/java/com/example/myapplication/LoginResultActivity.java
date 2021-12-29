@@ -1,6 +1,7 @@
 
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -36,6 +38,9 @@ public class LoginResultActivity extends AppCompatActivity {
     TextView TextView_get;
     int index =0,count=7;
     Toast sToast = null;
+
+    LinearLayout sc;
+    LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +50,34 @@ public class LoginResultActivity extends AppCompatActivity {
         fragment2 = new Fragment();
         menu = findViewById(R.id.menu);
         nav = findViewById(R.id.navigation);
+        sc = findViewById(R.id.linearLayout2);
+        linearLayout = findViewById(R.id.linearLayout);
+
+        Intent b = getIntent();
+        Button add = new Button(this);
+        String text = b.getStringExtra("제목");
+        add.setHint(text);
+        add.setWidth(sc.getWidth());
+        add.setHeight(48);
+        add.setId('1');
+        if(b.getExtras()!=null) {
+            Log.d("로그","서주영");
+
+            sc.addView(add);
+        }
+        int check = b.getIntExtra("삭제",0);
+        if(check == 1){
+            linearLayout.removeViewAt(0);
+        }
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ShowActivity.class);
+                i.putExtras(b.getExtras());
+
+                startActivity(i);
+            }
+        });
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
 
@@ -154,5 +187,14 @@ public class LoginResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        logout.setOnClickListener((new View.OnClickListener() {//로그아웃
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }));
     }
 }
