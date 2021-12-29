@@ -11,7 +11,7 @@
         android:text="시발 ㅈ같네 걍 만들어야지"
         android:textSize="35sp"
         android:layout_margin="10dp"
-        android:fontFamily="@font/jua"
+        android:fontFamily="@font/jua"w
         android:gravity="center"
         android:textColor="@color/black"
         android:id="@+id/title_show"
@@ -65,6 +65,7 @@
         android:layout_margin="10dp"
         android:id="@+id/main_show"
         />
+
 
 
 

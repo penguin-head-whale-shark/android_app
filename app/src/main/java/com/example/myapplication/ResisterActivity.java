@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,10 +36,12 @@ public class ResisterActivity extends Activity {
                 , @Field("school") String school);
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resister);
+      
         TextView id = findViewById(R.id.ID);
         TextView name = findViewById(R.id.name);
         TextView school = findViewById(R.id.school);

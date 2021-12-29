@@ -39,7 +39,8 @@
             android:layout_height="match_parent"
             android:hint="아이디"
             android:background="@null"
-            android:fontFamily="@font/jua">
+            android:fontFamily="@font/jua"
+            android:inputType="textPersonName">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -61,7 +62,8 @@
             android:layout_height="match_parent"
             android:hint="비밀번호"
             android:background="@null"
-            android:fontFamily="@font/jua">
+            android:fontFamily="@font/jua"
+            android:inputType="textPassword">
             <!--클릭했을 때 힌트가 위로 올라가는 효과가 있음-->
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -82,8 +84,8 @@
         android:layout_marginTop="70dp"
         android:gravity="center"
         android:paddingRight="12dp"
-        android:clickable="true"
-
+        android:clickable="false"
+        android:onClick="LoginClick"
         android:elevation="10dp">
         <!-- Linear Layout을 통한 버튼 만들기 (이미지 삽입한 버튼)-->
         <ImageView
