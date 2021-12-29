@@ -55,23 +55,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         TextInputEditText_password = findViewById(R.id.TextInputEditText_password);
         TextInputEditText_id = findViewById(R.id.TextInputEditText_id);
         t  = findViewById(R.id.Login_Button);
         res = findViewById(R.id.resister);
         res.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pw = TextInputEditText_password.getText().toString();
-                id = TextInputEditText_id.getText().toString();
-                Intent i =new Intent(getApplicationContext(), ResisterActivity.class);
-                startActivity(i);
-            }
-        });
-
-
-        t.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LoginResultActivity.class);
@@ -102,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
     }
 
     public interface Service{
@@ -124,7 +111,4 @@ public class MainActivity extends AppCompatActivity {
             return getretrofit().create(Service.class);
         }
     }
-
-
-
 }
