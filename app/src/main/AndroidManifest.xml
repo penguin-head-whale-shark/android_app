@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="n">
-        <activity android:name=".WriteActivity"/>
+        <activity android:name=".WriteActivity"
+            android:theme="@style/AppTheme"
+            />
         <activity android:name=".LoginResultActivity"
             android:theme="@style/AppTheme"
             />

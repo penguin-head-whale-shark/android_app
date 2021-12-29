@@ -41,6 +41,10 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static String st;
+    public static String Id;
+
     TextInputEditText TextInputEditText_password;
     TextInputEditText TextInputEditText_id;
     LinearLayout t;
@@ -59,16 +63,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LoginResultActivity.class);
-                String id = TextInputEditText_id.getText().toString();
+                Id = TextInputEditText_id.getText().toString();
                 String password = TextInputEditText_password.getText().toString();
 
-                Call<PostResult> call = MainActivity.RetrofitServiceImplFactory.Post().setPost(id,password);
+                Call<LoginResult> call = MainActivity.RetrofitServiceImplFactory.Post().setPost(Id,password);
 
-                call.enqueue(new Callback<PostResult>() {
+                call.enqueue(new Callback<LoginResult>() {
                     @Override
-                    public void onResponse(Call<PostResult> call, Response<PostResult> response) {
+                    public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                             Log.d("성공","성공");
                         if(response.isSuccessful()){
+                            st = response.body().getData().toString();
                             Log.d("성공","황지민");
                             startActivity(i);
                             finish();
@@ -78,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<PostResult> call, Throwable t) {
+                    public void onFailure(Call<LoginResult> call, Throwable t) {
                         t.printStackTrace();
                         Log.d("실패","서주영");
                     }
@@ -90,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     public interface Service{
         @FormUrlEncoded
         @POST("/api/v1/user/sign-in")
-        Call<PostResult> setPost(@Field("id") String id
+        Call<LoginResult> setPost(@Field("id") String id
                 ,@Field("password") String pw);
 
     }
